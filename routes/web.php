@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
+use App\Models\Item;
 
 // LAVALEL PROPRIETARY
 Route::get('/welcome', function () {
@@ -11,11 +12,11 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/', function () {
-    return view('home', ['title' => 'Home Page']);
+    return view('home', ['title' => 'Home Page', 'items' => Item::all()]);
 });
 
 Route::get('/item', function () {
-    return view('item', ['title' => 'Item Page']);
+    return view('item', ['title' => 'Item Page'] );
 });
 
 Route::get('/dashboard', function () {

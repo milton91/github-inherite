@@ -133,7 +133,7 @@
   <!-- CATEGORIES AND OTHER NAVBAR -->
   <div class="hidden md:flex items-center justify-between w-full">
     <!-- CATEGORIES -->
-    <div class="ml-10 flex items-baseline space-x-4">
+    <div class="ml-10 flex items-baseline space-x-4 pt-2">
       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
       <x-nav-link href="/" :active="request()->is('/')">Furniture</x-nav-link>
       <x-nav-link href="/posts" :active="request()->is('posts')" class="py-4">Electronic</x-nav-link>
@@ -145,7 +145,7 @@
     <div class="ml-auto flex items-baseline space-x-4">
       <x-nav-link href="/contact" :active="request()->is('contact')" class="py-4">Sell Item</x-nav-link>
       <x-nav-link href="/contact" :active="request()->is('contact')" class="py-4">
-        <img src="{{ asset('img/chat-logo.png') }}" alt="chat-logo" class="h-6 w-6">
+        <img src="{{ asset('img/chat-logo.png') }}" alt="chat-logo" class="h-6 w-5">
         <span></span>
       </x-nav-link>
     </div>
