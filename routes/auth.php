@@ -12,9 +12,18 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
+    //URL: /register
+    //HTTP Method: GET
+    //Controller Method: RegisteredUserController::create
+    //Name: 'register'
+    //This route displays the registration form to the user. When user navigates to /register
     Route::get('register', [RegisteredUserController::class, 'create'])
         ->name('register');
 
+    //URL: /register
+    //HTTP Method: POST
+    //Controller Method: RegisteredUserController::store
+    //This Route is used to handle the form submission when a user completes and submits registration form
     Route::post('register', [RegisteredUserController::class, 'store']);
 
     Route::get('login', [AuthenticatedSessionController::class, 'create'])

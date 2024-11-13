@@ -1,53 +1,60 @@
-<x-layout>
+<x-app-layout>
     <x-slot:title>{{ $title }}</x-slot>
     
     <!-- Header with navigation -->
-    <div class="hidden md:flex items-center justify-between w-full">
-        <div class="ml-10 flex items-baseline space-x-4">
-            <x-nav-link href="/" :active="request()->is('/')">Back</x-nav-link>
+    <div class="hidden md:flex items-center justify-between w-full p-5">
+        <div class="flex items-center space-x-4">
+            <x-nav-link href="/dashboard" :active="request()->is('/')">Back</x-nav-link>
         </div>
     </div>
 
     <!-- Main Content -->
-    <div class="hidden md:flex items-stretch justify-between w-full">
-        <!-- Image Thumbnails -->
-        <div class="ml-10 space-x-4 w-1/5">
-            <div class="h-20 w-20 my-5">
-                <img src="{{ asset('img/sofa1.png') }}" alt="sofa1" class="h-full w-full object-contain">
-            </div>
-            <div class="h-20 w-20 my-5">
-                <img src="{{ asset('img/sofa2.png') }}" alt="sofa2" class="h-full w-full object-contain">
-            </div>
-            <div class="h-20 w-20 my-5">
-                <img src="{{ asset('img/sofa3.png') }}" alt="sofa3" class="h-full w-full object-contain">
-            </div>
-            <div class="h-20 w-20 my-5">
-                <img src="{{ asset('img/sofa4.png') }}" alt="sofa4" class="h-full w-full object-contain">
-            </div>
-        </div>
+    <div class="flex flex-col md:flex-row items-stretch justify-between w-full p-5 space-y-6 md:space-y-0">
+        
+        <!-- Carousel for Images -->
+        <div x-data="{
+                currentIndex: 0,
+                images: {{ json_encode(explode(',', $item['image'])) }}
+            }" 
+            class="flex flex-col items-center w-full md:w-1/2">
 
-        <!-- THUMBNAIL Image (object-cover to force it to fill the square, might crop parts) -->
-        <div class="ml-10 space-x-4 flex-none h-64 w-64 overflow-hidden w-2/5">
-            <img src="{{ asset('img/THUMBNAIL.png') }}" alt="thumbnail" class="object-cover h-full w-full">
+            <!-- Updated height and width -->
+            <div class="relative h-64 w-64 overflow-hidden rounded-md shadow-lg">
+                <template x-for="(image, index) in images" :key="index">
+                    <div x-show="currentIndex === index" class="absolute inset-0 transition-all duration-500">
+                        <img :src="'/storage/' + image" alt="Item Image" class="object-cover h-full w-full">
+                    </div>
+                </template>
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="flex justify-center space-x-4 mt-4">
+                <button @click="currentIndex = (currentIndex - 1 + images.length) % images.length" class="bg-gray-200 hover:bg-gray-300 p-2 rounded-full">
+                    &larr; Previous
+                </button>
+                <button @click="currentIndex = (currentIndex + 1) % images.length" class="bg-gray-200 hover:bg-gray-300 p-2 rounded-full">
+                    Next &rarr;
+                </button>
+            </div>
         </div>
 
         <!-- Info Card -->
-        <div class="ml-10 items-baseline space-x-4 w-2/5">
-            <div class="flex space-x-4">
-                <div class="text-xl">Comfy Sofa</div>
-                <div class="text-xl">880.000</div>
-            </div>
-            <div class="flex">Furniture</div>
-            <div>Toko bagus</div>
-            <div>Alam Sutera</div>
-            <div>This is rating</div>
-            <div>Sofa estetok</div>
-            <div class="flex space-x-4">
-                <x-nav-link href="/login" :active="request()->is('login')" class="bg-green-500 text-white rounded-full px-4 py-1 hover:bg-green-600 whitespace-nowrap" style="background-color: #063628">
-                  Chat now
-                </x-nav-link>
-                <img src="{{ asset('img/wishlist.png') }}" alt="chat-logo" class="h-6 w-6">
+        <div class="w-full md:w-2/5 space-y-4">
+            <div class="text-2xl font-semibold text-gray-900">{{ $item['name'] }}</div>
+            <div class="text-xl font-bold text-green-700">Rp. {{ number_format($item['price'], 0, ',', '.') }}</div>
+            <div class="text-md text-gray-700">{{ $item['category'] }}</div>
+            <div class="text-md text-gray-600">Seller: {{ $item['seller'] }}</div>
+            <div class="text-md text-gray-600">Location: {{ $item['location'] }}</div>
+            <!-- <div class="text-md text-yellow-500">Rating: {{ $item['rating'] }} ★</div> -->
+            <div class="text-sm text-gray-500">{{ $item['description'] }}</div>
+            <div class="flex space-x-4 items-center mt-4">
+            <x-nav-link href="{{ route('chat.index', $item['id']) }}" class="bg-green-600 text-white rounded-full px-4 py-2 hover:bg-green-700">
+                Chat Now
+            </x-nav-link>
+                <button class="focus:outline-none">
+                    <img src="{{ asset('img/wishlist.png') }}" alt="wishlist" class="h-6 w-6">
+                </button>
             </div>
         </div>
     </div>
-</x-layout>
+</x-app-layout>
