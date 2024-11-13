@@ -37,6 +37,9 @@
                     <x-slot name="content">
                         <!-- Wishlist and Sell Item Links for Authenticated Users Only -->
                         @auth
+                            <x-dropdown-link :href="route('user.chats')">
+                                {{ __('Chats') }}
+                            </x-dropdown-link>
                             <x-dropdown-link href="/wishlist">Wishlist</x-dropdown-link>
                             <x-dropdown-link :href="route('sell-item')">
                                 {{ __('Sell Item') }}
