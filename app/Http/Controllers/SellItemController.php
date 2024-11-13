@@ -40,4 +40,10 @@ class SellItemController extends Controller
 
         return redirect()->route('dashboard')->with('status', 'Item listed successfully!');
     }
+
+    public function myItems()
+    {
+        $items = Item::where('seller', Auth::user()->name)->latest()->get(); // Fetch all items where the seller is the logged-in user
+        return view('my-items', compact('items')); // Pass items to the view
+    }
 }

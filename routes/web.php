@@ -49,4 +49,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/user-chats', [ChatController::class, 'userChats'])->name('user.chats');
 });
 
+Route::get('/my-items', [SellItemController::class, 'myItems'])->name('my-items')->middleware('auth');
+
 require __DIR__.'/auth.php';

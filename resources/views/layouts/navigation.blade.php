@@ -40,6 +40,9 @@
                             <x-dropdown-link :href="route('user.chats')">
                                 {{ __('Chats') }}
                             </x-dropdown-link>
+                            <x-dropdown-link :href="route('my-items')">
+                                {{ __('My Items') }}
+                            </x-dropdown-link>
                             <x-dropdown-link href="/wishlist">Wishlist</x-dropdown-link>
                             <x-dropdown-link :href="route('sell-item')">
                                 {{ __('Sell Item') }}
