@@ -12,12 +12,16 @@
                     @foreach ($chats as $chat)
                         <div class="border-b pb-4 mb-4">
                             <h3 class="text-lg font-semibold">
-                                Chat about <a href="{{ route('chat.index', $chat->product->id) }}" class="text-blue-600 hover:underline">
+                                Chat about 
+                                <a href="{{ route('chat.index', $chat->product->id) }}" class="text-blue-600 hover:underline">
                                     {{ $chat->product->name }}
                                 </a>
                             </h3>
                             <p class="text-gray-600">Last message: {{ $chat->message }}</p>
                             <p class="text-sm text-gray-500">Sent at: {{ $chat->created_at->format('d M Y, H:i') }}</p>
+                            <p class="text-sm text-gray-500">
+                                By: {{ $chat->user->name }} | Product Seller: {{ $chat->product->seller }}
+                            </p>
                         </div>
                     @endforeach
 

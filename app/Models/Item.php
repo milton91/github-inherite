@@ -20,4 +20,9 @@ class Item extends Model
         'rating',
         'image',
     ];
+
+    public function chats()
+    {
+        return $this->hasMany(Chat::class, 'product_id');
+    }
 }

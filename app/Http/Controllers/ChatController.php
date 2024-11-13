@@ -34,10 +34,13 @@ class ChatController extends Controller
 
     public function userChats()
     {
-        $chats = Chat::where('user_id', Auth::id())
-            ->with('product') // Assuming each chat is linked to a product
-            ->latest()
-            ->get();
+        $chats = Chat::whereHas('product', function ($query) {
+            $query->where('seller', Auth::user()->name); // Assuming `seller` is the product's seller name
+        })
+        ->orWhere('user_id', Auth::id())
+        ->with('product') // Load related product
+        ->latest()
+        ->get();
 
         return view('user-chats', compact('chats'));
     }
