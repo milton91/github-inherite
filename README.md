@@ -21,25 +21,16 @@ Inherite is a Laravel-based web application platform to buy and sell second hand
 [![My Skills](https://skillicons.dev/icons?i=laravel,php)](https://skillicons.dev)
 
 #### Backend:
-[![My Skills](https://skillicons.dev/icons?i=firebase)](https://skillicons.dev)
-
-#### Local Storage:
-[![My Skills](https://skillicons.dev/icons?i=sqlite)](https://skillicons.dev)
-
+[![My Skills](https://skillicons.dev/icons?i=mysql)](https://skillicons.dev)
 
 ## Getting Started
 
 #### Prerequisites
 
-- Android Studio (Ladybug)
+- Laravel
 
-- Firebase Account & Project
+- IDE
 
-- Device with Fingerprint Sensor (for testing)
-
-- Emulator
-
-- [Optional] Physical Device with android version > 10
 #### Installation
 
 - Clone the repository:
@@ -61,11 +52,17 @@ Inherite is a Laravel-based web application platform to buy and sell second hand
 ### Contributors:
 <table>
   <tbody>
-        <td align="center" valign="top" width="14.28%"><a href="https://github.com/DLiech"><img src="https://avatars.githubusercontent.com/u/122514634?v=4" width="100px;" alt="Deanzen Lie"/>
-          <h2>DLiech</h2>
+        <td align="center" valign="top" width="14.28%"><a href="https://github.com/milton91">
+          <h2>Milton</h2>
         </td>
-        <td align="center" valign="top" width="14.28%"><a href="https://github.com/itzKv"><img src="https://avatars.githubusercontent.com/u/116947826?v=4" width="100px;" alt="Kevin Brivio"/>
-          <h2>itzKv</h2>
+        <td align="center" valign="top" width="14.28%"><a href="https://github.com/davetjong2">
+          <h2>Dave</h2>
+        </td>
+        <td align="center" valign="top" width="14.28%"><a href="https://github.com/ernesto-04">
+          <h2>Ernesto</h2>
+        </td>
+        <td align="center" valign="top" width="14.28%"><a href="https://github.com/itzKv">
+          <h2>Kevin</h2>
         </td>
 </tbody>
 </table>
