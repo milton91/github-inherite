@@ -1,4 +1,4 @@
-# Virtual Attendance
+# Inherite
 
 ## Project Overview
 Inherite is a Laravel-based web application platform to buy and sell second hand goods
@@ -18,10 +18,7 @@ Inherite is a Laravel-based web application platform to buy and sell second hand
 ## Tech Stack
 
 #### Language: 
-[![My Skills](https://skillicons.dev/icons?i=java)](https://skillicons.dev)
-
-#### IDE: 
-[![My Skills](https://skillicons.dev/icons?i=androidstudio)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=laravel,php)](https://skillicons.dev)
 
 #### Backend:
 [![My Skills](https://skillicons.dev/icons?i=firebase)](https://skillicons.dev)
@@ -47,18 +44,18 @@ Inherite is a Laravel-based web application platform to buy and sell second hand
 
 - Clone the repository:
   
-  https://github.com/DLiech/VirtualAttendance.git
+  https://github.com/Milton91/github-inherite.git
   
-- Open the project in Android Studio.
+- Open the XAMPP and/or Laragon.
 
-- Connect Firebase to the project by following the Firebase setup guide.
+- Make sure PHP, nodejs and Laravel is already installed and enabled.
 
-- Sync Gradle and run the application.
+- Make database migration.
 
 - Please use this credential for first time Login:
   
-  Admin@gmail.com
-  Testing123
+  testing@gmail.com
+  testing123
   
 
 ### Contributors:
