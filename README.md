@@ -1,66 +1,74 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Virtual Attendance
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Project Overview
+Inherite is a Laravel-based web application platform to buy and sell second hand goods
 
-## About Laravel
+## Key Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Buy and Sell
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- 3rd Party Payment
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Chat
 
-## Learning Laravel
+- Database using SQLite
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Whistlist, cart, and other common e-commerce features
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Tech Stack
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### Language: 
+[![My Skills](https://skillicons.dev/icons?i=java)](https://skillicons.dev)
 
-## Laravel Sponsors
+#### IDE: 
+[![My Skills](https://skillicons.dev/icons?i=androidstudio)](https://skillicons.dev)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+#### Backend:
+[![My Skills](https://skillicons.dev/icons?i=firebase)](https://skillicons.dev)
 
-### Premium Partners
+#### Local Storage:
+[![My Skills](https://skillicons.dev/icons?i=sqlite)](https://skillicons.dev)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
+## Getting Started
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+#### Prerequisites
 
-## Code of Conduct
+- Android Studio (Ladybug)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Firebase Account & Project
 
-## Security Vulnerabilities
+- Device with Fingerprint Sensor (for testing)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Emulator
 
-## License
+- [Optional] Physical Device with android version > 10
+#### Installation
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Clone the repository:
+  
+  https://github.com/DLiech/VirtualAttendance.git
+  
+- Open the project in Android Studio.
+
+- Connect Firebase to the project by following the Firebase setup guide.
+
+- Sync Gradle and run the application.
+
+- Please use this credential for first time Login:
+  
+  Admin@gmail.com
+  Testing123
+  
+
+### Contributors:
+<table>
+  <tbody>
+        <td align="center" valign="top" width="14.28%"><a href="https://github.com/DLiech"><img src="https://avatars.githubusercontent.com/u/122514634?v=4" width="100px;" alt="Deanzen Lie"/>
+          <h2>DLiech</h2>
+        </td>
+        <td align="center" valign="top" width="14.28%"><a href="https://github.com/itzKv"><img src="https://avatars.githubusercontent.com/u/116947826?v=4" width="100px;" alt="Kevin Brivio"/>
+          <h2>itzKv</h2>
+        </td>
+</tbody>
+</table>
